@@ -28,39 +28,8 @@ function new_image()
 
 window.addEventListener("keydown", my_keydown);
 
-function my_keydown(e)
-{
-	keyPressed = e.keyCode;
-	console.log(keyPressed);
-	if((ball_x==350)&&(ball_y<=50)){
-		canvas.remove(ball_obj);
-		console.log("You have Hit the Goal!!!");
-		document.getElementById("hd3").innerHTML="You have Hit the Goal!!!";
-	    document.getElementById("myCanvas").style.borderColor="red";
-		document.getElementById("myCanvas").style.background="night-stadium-arena-soccer-field-championship-win-confetti-tinsel-59253235.jpg";
-		if(keyPressed == '38')
-		{
-			up();
-			console.log("up");
-		}
-		if(keyPressed == '40')
-		{
-			down();
-			console.log("down");
-		}
-		if(keyPressed == '37')
-		{
-			left();
-			console.log("left");
-		}
-		if(keyPressed == '39')
-		{
-			right();
-			console.log("right");
-		}
-	}
-	
-	function up()
+
+function up()
 	{
 		if(ball_y >=5)
 		{
@@ -117,3 +86,38 @@ function my_keydown(e)
 	
 }
 
+
+
+function my_keydown(e)
+{
+	keyPressed = e.keyCode;
+	console.log(keyPressed);
+	if((ball_x==350)&&(ball_y<=50)){
+		canvas.remove(ball_obj);
+		console.log("You have Hit the Goal!!!");
+		document.getElementById("hd3").innerHTML="You have Hit the Goal!!!";
+	    document.getElementById("myCanvas").style.borderColor="red";
+		document.getElementById("myCanvas").style.background="night-stadium-arena-soccer-field-championship-win-confetti-tinsel-59253235.jpg";
+		if(keyPressed == '38')
+		{
+			up();
+			console.log("up");
+		}
+		if(keyPressed == '40')
+		{
+			down();
+			console.log("down");
+		}
+		if(keyPressed == '37')
+		{
+			left();
+			console.log("left");
+		}
+		if(keyPressed == '39')
+		{
+			right();
+			console.log("right");
+		}
+	}
+	
+	
